@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:5.0
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  app:
+    build: .
+    container_name: spring_app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+    environment:
+      - SPRING_DATA_MONGODB_URI=mongodb://mongo:27017/nomeDoBanco
+      - AWS_REGION=${aws.region}
+      - AWS_SQS_QUEUEURL=${aws.sqs.queueUrl}
+      - AWS_LOCAL_ENDPOINT=${aws.local.endpoint}
+      - PARQUIMETRO_EMAIL_NOREPLY=${parquimetro.email-noreply}
+
+volumes:
+  mongo-data:
