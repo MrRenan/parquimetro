@@ -137,4 +137,8 @@ public class EstacionamentoService {
             estacionamento.setValor(horasCheias * 10);
         }
     }
+
+    public void deletarEstacionamentoPorId(String id) {
+        estacionamentoRepository.deleteById(id);
+    }
 }

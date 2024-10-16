@@ -56,10 +56,10 @@ public class MotoristaController {
         return motoristaService.obterVeiculosDoMotorista(motoristaId);
     }
 
-    @DeleteMapping("/excluir")
-    public ResponseEntity<Void> deletarTodosOsMotoristas() {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletarMotoristaPorId(@PathVariable String id) {
         // Exclui todos os motoristas
-        motoristaService.deletarTodosOsMotoristas();
+        motoristaService.deletarMotoristaPorId(id);
         // Retorna uma resposta com status 204 (NO CONTENT)
         return ResponseEntity.noContent().build();
     }

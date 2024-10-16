@@ -98,12 +98,12 @@ public class MotoristaServiceTest {
     }
 
     /**
-     * Testa a exclusão de todos os motoristas.
+     * Testa a exclusão de um motorista.
      */
     @Test
     public void testDeletarTodosOsMotoristas() {
-        motoristaService.deletarTodosOsMotoristas();
-        verify(motoristaRepository).deleteAll();
+        motoristaService.deletarMotoristaPorId("motoristaId");
+        verify(motoristaRepository).deleteById("motoristaId");
     }
 
     // Outros testes conforme necessário

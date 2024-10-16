@@ -45,7 +45,7 @@ public class VeiculoService {
                 .toList();
     }
 
-    public void deletarTodosOsVeiculos() {
-        veiculoRepository.deleteAll();
+    public void deletarVeiculoPorId(String id) {
+        veiculoRepository.deleteById(id);
     }
 }

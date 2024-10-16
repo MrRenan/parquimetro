@@ -47,10 +47,10 @@ public class EstacionamentoController {
         return new ResponseEntity<>(estacionamentos, HttpStatus.OK);
     }
 
-    @DeleteMapping("/excluir")
-    public ResponseEntity<Void> excluirEstacionamentos() {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> excluirEstacionamentoPorId(@PathVariable String id) {
         // Exclui todos os estacionamentos
-        estacionamentoRepository.deleteAll();
+        estacionamentoService.deletarEstacionamentoPorId(id);
         // Retorna uma resposta com status 204 (NO CONTENT)
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }

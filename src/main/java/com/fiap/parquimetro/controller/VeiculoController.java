@@ -43,10 +43,10 @@ public class VeiculoController {
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build());
     }
 
-    @DeleteMapping("/excluir")
-    public ResponseEntity<Void> deletarTodosOsVeiculos() {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletarVeiculoPorId(@PathVariable String id) {
         // Exclui todos os veículos
-        veiculoService.deletarTodosOsVeiculos();
+        veiculoService.deletarVeiculoPorId(id);
         // Retorna uma resposta com status 204 (NO CONTENT)
         return ResponseEntity.noContent().build();
     }

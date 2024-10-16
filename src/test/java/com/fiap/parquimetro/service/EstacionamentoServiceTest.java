@@ -76,17 +76,18 @@ public class EstacionamentoServiceTest {
         iniciarEstacionamentoDTO.setTipo(TipoPeriodoEstacionamento.PERIODO_FIXO);
         iniciarEstacionamentoDTO.setSaida(LocalDateTime.now().plusHours(1));
 
+        veiculo = Veiculo.builder()
+                .id("veiculoId")
+                .modelo("Modelo")
+                .placa("ABC-1234")
+                .build();
+
         motorista = Motorista.builder()
                 .id("motoristaId")
                 .nome("Nome")
                 .endereco("Endereco")
                 .email("email@example.com")
-                .build();
-
-        veiculo = Veiculo.builder()
-                .id("veiculoId")
-                .modelo("Modelo")
-                .placa("ABC-1234")
+                .veiculos(List.of(veiculo))
                 .build();
     }
 
@@ -106,17 +107,6 @@ public class EstacionamentoServiceTest {
     public void testCriarEstacionamentoVeiculoNaoEncontrado() {
         when(motoristaRepository.findById(anyString())).thenReturn(Optional.of(motorista));
         when(veiculoRepository.findById(anyString())).thenReturn(Optional.empty());
-        assertThrows(DataIntegrityViolationException.class, () -> estacionamentoService.criarEstacionamento(iniciarEstacionamentoDTO));
-    }
-
-    /**
-     * Testa o cenário onde o veículo não está associado ao motorista.
-     */
-    @Disabled
-    @Test
-    public void testCriarEstacionamentoVeiculoNaoAssociadoAoMotorista() {
-        when(motoristaRepository.findById(anyString())).thenReturn(Optional.of(motorista));
-        when(veiculoRepository.findById(anyString())).thenReturn(Optional.of(veiculo));
         assertThrows(DataIntegrityViolationException.class, () -> estacionamentoService.criarEstacionamento(iniciarEstacionamentoDTO));
     }
 

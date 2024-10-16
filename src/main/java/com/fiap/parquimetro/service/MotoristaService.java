@@ -59,8 +59,8 @@ public class MotoristaService {
         return motoristaRepository.findAll();
     }
 
-    public void deletarTodosOsMotoristas() {
-        motoristaRepository.deleteAll();
+    public void deletarMotoristaPorId(String id) {
+        motoristaRepository.deleteById(id);
     }
 
     public ResponseEntity<String> vincularVeiculoAoMotorista(String motoristaId, String veiculoId) {
