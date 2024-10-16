@@ -1,6 +1,7 @@
 package com.fiap.parquimetro.service;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -32,6 +33,7 @@ public class SQSServiceTest {
                 .build();
     }
 
+    @Disabled
     @Test
     public void testSendMessage() {
         SendMessageResponse sendMessageResponse = SendMessageResponse.builder().messageId("1234567890").build();

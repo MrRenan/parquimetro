@@ -26,8 +26,8 @@ import java.util.Optional;
 @Slf4j
 public class MotoristaService {
 
-    private final MotoristaRepository motoristaRepository = null;
-    private final VeiculoRepository veiculoRepository = null;
+    private final MotoristaRepository motoristaRepository;
+    private final VeiculoRepository veiculoRepository;
 
     public Motorista registrarMotorista(Motorista motorista) {
         // Verificar se já existe um motorista com o mesmo email

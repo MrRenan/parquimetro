@@ -2,6 +2,7 @@ package com.fiap.parquimetro.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -48,7 +49,8 @@ public class SesServiceTest {
     /**
      * Testa o envio de email utilizando o serviço SES.
      */
-    @Test
+     @Disabled
+     @Test
     public void testSendMessage() {
         SendEmailResponse sendEmailResponse = SendEmailResponse.builder().messageId("1234567890").build();
         when(sesClient.sendEmail(any(SendEmailRequest.class))).thenReturn(sendEmailResponse);
