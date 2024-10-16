@@ -1,0 +1,427 @@
+{
+	"info": {
+		"_postman_id": "399e5bfd-9efc-451e-9d0b-499c75074bbd",
+		"name": "FIAP - Parquimetro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38769967"
+	},
+	"item": [
+		{
+			"name": "Veiculos",
+			"item": [
+				{
+					"name": "GET Veiculos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/parquimetro/veiculos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"parquimetro",
+								"veiculos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Veiculos By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/parquimetro/veiculos/650d9dd6728f4d70cb5e39e0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"parquimetro",
+								"veiculos",
+								"650d9dd6728f4d70cb5e39e0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Veiculos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"modelo\": \"Fusca Pé de Boi\",\n    \"placa\": \"ABC-1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/parquimetro/veiculos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"parquimetro",
+								"veiculos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Veiculos",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/parquimetro/veiculos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"parquimetro",
+								"veiculos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Estacionamentos",
+			"item": [
+				{
+					"name": "GET Estacionamentos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/parquimetro/estacionamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"parquimetro",
+								"estacionamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Estacionamento By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/parquimetro/estacionamentos/650db53b944c3f38c65f33da",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"parquimetro",
+								"estacionamentos",
+								"650db53b944c3f38c65f33da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Estacionamento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"entrada\": \"2023-09-22T15:23:45.592\",\n    \"tipo\": \"POR_HORA\",\n    \"condutorId\": \"650d9f7fed584862682e84b4\",\n    \"veiculoId\": \"650d9dd6728f4d70cb5e39e0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/parquimetro/estacionamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"parquimetro",
+								"estacionamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Atualizar Saída Estacionamento (por hora)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"saida\": \"2023-10-31T22:01\",\n    \"formaPagamentoId\": \"654194bb57bab768055f7a93\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/parquimetro/estacionamentos/6541953657bab768055f7a95",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"parquimetro",
+								"estacionamentos",
+								"6541953657bab768055f7a95"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Estacionamentos",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/parquimetro/estacionamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"parquimetro",
+								"estacionamentos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Motoristas",
+			"item": [
+				{
+					"name": "GET Motoristas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/parquimetro/condutores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"parquimetro",
+								"condutores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Motoristas By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/parquimetro/condutores/650d9f7fed584862682e84b4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"parquimetro",
+								"condutores",
+								"650d9f7fed584862682e84b4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Vincular Veiculos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/parquimetro/condutores/650d9f7fed584862682e84b4/veiculos?veiculoId=650da265aa434d228ec279cb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"parquimetro",
+								"condutores",
+								"650d9f7fed584862682e84b4",
+								"veiculos"
+							],
+							"query": [
+								{
+									"key": "veiculoId",
+									"value": "650da265aa434d228ec279cb"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Motoristas",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/parquimetro/condutores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"parquimetro",
+								"condutores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Motoristas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Jack Sparrow\",\n    \"endereco\": \"os 7 mares\",\n    \"email\": \"jack.sparrow@blackpearl.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/parquimetro/condutores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"parquimetro",
+								"condutores"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Formas de pagamento",
+			"item": [
+				{
+					"name": "GET Formas Pagamento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/parquimetro/formas-pagamento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"parquimetro",
+								"formas-pagamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Formas Pagamento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/parquimetro/formas-pagamento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"parquimetro",
+								"formas-pagamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Formas Pagamento Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"descricao\": \"Baú do tesouro\",\n    \"tipo\": \"CARTAO_CREDITO\",\n    \"condutorId\": \"650d9f7fed584862682e84b4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/parquimetro/formas-pagamento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"parquimetro",
+								"formas-pagamento"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
